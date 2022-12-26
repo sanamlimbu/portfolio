@@ -12,80 +12,94 @@
       href="https://fonts.googleapis.com/css?family=Rubik:300,500,700"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-        font-size: calc(10px + 0.33vw);
-        -webkit-font-smoothing: antialiased;
-        padding: 5vh 10vw;
-        color: #121314;
-      }
-      h1 {
-        font-size: 4.5em;
-        font-weight: 500;
-        margin-bottom: 0;
-      }
-      h2 {
-        font-size: 2.3em;
-        font-weight: 400;
-        margin-bottom: 0;
-      }
-      p {
-        font-size: 1.6em;
-        font-weight: 300;
-        line-height: 1.4;
-        max-width: 28em;
-      }
-      a {
-        text-decoration: none;
-        white-space: nowrap;
-        color: #121314;
-        position: relative;
-        gap: "10px";
-      }
-      a:after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 66%;
-        left: -0.1em;
-        right: -0.1em;
-        bottom: 0;
-        transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-        background-color: rgba(211, 211, 211);
-      }
-      a:hover:after {
-        top: 0%;
-      }
-    </style>
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Hello.</h1>
-    <h2>My name is Sanam Limbu.</h2>
-    <p>
-      I am a full stack software developer based in Perth. I am proficient in
-      developing enterprise softwares using React.js, Golang, PostgreSQL, and
-      Docker.
-    </p>
-    <p>
-      Speaking about my formal education, I have completed Bachelor of Computer
-      Science and Master of Cyber Security.
-    </p>
-    <p>
-      Besides coding, I enjoy going to the gym and running, and I am also a huge
-      fan of Manchester United and enjoy watching them play.
-    </p>
-    <p>
-      <a
-        style="margin-right: 2em"
-        href="https://www.linkedin.com/in/sanam-limbu/"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
-      <a href="https://github.com/sanamlimbu" target="_blank"> GitHub</a>
-    </p>
+    <div class="intro">
+      <h1>Sanam Limbu</h1>
+      <p>
+        Perth, Western Australia <br />
+        <a
+          style="margin-right: 1em"
+          href="mailto:limbu.sanam@hotmail.com"
+          target="_blank"
+        >
+          Email
+        </a>
+        <a
+          style="margin-right: 1em"
+          href="https://www.linkedin.com/in/sanam-limbu/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+        <a
+          style="margin-right: 1em"
+          href="https://github.com/sanamlimbu"
+          target="_blank"
+        >
+          GitHub</a
+        >
+        <a href="https://github.com/sanamlimbu" target="_blank"> Resume</a>
+      </p>
+    </div>
+    <div class="main">
+      <div>
+        <h2>About Me</h2>
+        <p style="margin-bottom: 0.5em">
+          I am a software developer with a solid background in enterprise
+          software development and a proven ability to create solutions that
+          address the needs of businesses.
+        </p>
+        <p style="margin-bottom: 0.5em">
+          Besides coding, I enjoy going to the gym and running, and I am also a
+          massive fan of Manchester United and enjoy watching them play.
+        </p>
+        <p>
+          I look forward to contributing to complex projects using modern tools
+          and collaborating with an engaging team.
+        </p>
+      </div>
+      <div>
+        <h2>Projects</h2>
+        <p class="project">
+          <a href="https://www.thepackmusiccoop.com.au/" target="_blank"
+            >The Pack</a
+          >
+          - Subscription based music streaming platform where local WA artists,
+          businesses, and listeners can connect
+        </p>
+        <p class="project">
+          <a>Impact Tracker</a> - SaaS platform for local governments in WA to
+          manage and visualize its sustainable development projects data
+        </p>
+        <p>
+          <a href="https://osana.care/" target="_blank">Osana </a> -
+          Appointments, billings, and patients management system for medical
+          clinics
+        </p>
+      </div>
+      <div>
+        <h2>Skills</h2>
+        <p>
+          I am comfortable with Golang, React.js, TypeScript, C#, Docker, and
+          PostgreSQL, and I can pick up new languages and tools quickly.
+        </p>
+      </div>
+      <div>
+        <h2>Education</h2>
+        <p>
+          Speaking about my formal education, I have completed, Bachelor of
+          Computer Science and Master of Cyber Security.
+        </p>
+      </div>
+      <div>
+        <h2>Certifications</h2>
+        <p>
+          I am an AWS Certified Cloud Practitioner and have experience with
+          services like EC2, CloudFront, Route 53, and S3.
+        </p>
+      </div>
+    </div>
   </body>
 </html>

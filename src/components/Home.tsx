@@ -204,7 +204,7 @@ export default function Home({ id }: { id: string }) {
   );
 }
 
-const AmoebaBorderBox = styled(Box)(({ theme }) => ({
+const AmoebaBorderBox = styled(Box)(({}) => ({
   backgroundImage: `url(${Sanam})`,
   width: "22rem",
   height: "22rem",
@@ -246,11 +246,11 @@ const AmoebaBorderBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledImg = styled("img")(({ theme }) => ({
+const StyledImg = styled("img")(({}) => ({
   height: "2em",
 }));
 
-export const ImageContainer = styled(Box)(({ theme }) => ({
+export const ImageContainer = styled(Box)(({}) => ({
   width: "fit-content",
   height: "fit-content",
   backgroundColor: "white",

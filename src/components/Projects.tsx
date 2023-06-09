@@ -28,6 +28,7 @@ export default function Projects({ id }: { id: string }) {
             display: "flex",
             justifyContent: "space-between",
             "@media (max-width: 971px)": {
+              justifyContent: "center",
               textAlign: "center",
             },
           }}
@@ -45,7 +46,10 @@ export default function Projects({ id }: { id: string }) {
             </Typography>
             <Typography
               variant="h5"
-              sx={{ marginTop: "0.5em", fontWeight: "bold" }}
+              sx={{
+                marginTop: "0.5em",
+                fontWeight: "bold",
+              }}
             >
               Each project is a unique piece of development 🧩
             </Typography>

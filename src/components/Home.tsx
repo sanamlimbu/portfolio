@@ -36,16 +36,22 @@ export default function Home({ id }: { id: string }) {
           flexDirection: "column",
           maxWidth: "62em",
           width: "100%",
-          "@media (max-width: 500px)": {
-            padding: "2em 2em",
+          padding: "13em 2em 14em 2em",
+          "@media (max-width: 480px)": {
+            padding: "7em 2em 6em 2em",
           },
-          "@media (max-width: 1024px)": {
-            padding: "6em 2em 2em 2em!important",
+          "@media (min-width: 481px) and (max-width: 768px)": {
+            padding: "9em 2em 6em 2em",
           },
-          "@media (max-width: 1281px)": {
-            padding: "8em 2em 14em 2em!important",
+          "@media (min-width: 769px) and (max-width: 1024px)": {
+            padding: "9em 2em 6em 2em",
           },
-          padding: "16em 2em 14em 2em",
+          "@media (min-width: 1025px) and (max-width: 1200px)": {
+            padding: "11em 2em 6em 2em",
+          },
+          "@media (min-width: 1201px)": {
+            padding: "14em 2em 14em 2em",
+          },
         }}
       >
         <Box
@@ -60,7 +66,7 @@ export default function Home({ id }: { id: string }) {
           }}
         >
           <Box>
-            <Typography variant={matches ? "h3" : "h2"} fontWeight="bold">
+            <Typography variant={matches ? "h4" : "h2"} fontWeight="bold">
               {" "}
               Full Stack Software
               <br />
@@ -148,7 +154,7 @@ export default function Home({ id }: { id: string }) {
             sx={{
               marginBottom: "1em",
               marginTop: "3em",
-              "@media (max-width: 900px)": {
+              "@media (max-width: 912px)": {
                 textAlign: "center",
               },
             }}
@@ -157,6 +163,7 @@ export default function Home({ id }: { id: string }) {
               sx={{
                 fontSize: "18px",
                 fontWeight: "bold",
+                marginBottom: "0.5em",
               }}
             >
               Tech Stack
@@ -170,7 +177,7 @@ export default function Home({ id }: { id: string }) {
               gap: "1em",
               flexWrap: "wrap",
               marginBottom: "1em",
-              "@media (max-width: 900px)": {
+              "@media (max-width: 912px)": {
                 justifyContent: "center",
               },
             }}

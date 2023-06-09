@@ -29,7 +29,7 @@ export default function RentHome() {
           maxWidth: "22em",
         }}
       >
-        RentHome is a web application designed to simplify the process of
+        Rent Home is a web application designed to simplify the process of
         renting and finding homes. It provides a user-friendly platform where
         agents can list rental properties, and tenants can easily search
         available homes.

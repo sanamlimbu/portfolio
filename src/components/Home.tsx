@@ -1,146 +1,203 @@
-import { GitHub, LinkedIn } from "@mui/icons-material";
-import { Box, Divider, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  Divider,
+  IconButton,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { styled } from "@mui/system";
 import AWS from "../assets/aws.svg";
+import CSS from "../assets/css.svg";
+import GitHub from "../assets/github.svg";
 import Go from "../assets/go.svg";
+import HTML from "../assets/html.svg";
 import JavaScript from "../assets/javascript.svg";
+import LinkedIn from "../assets/linkedin.svg";
 import Postgres from "../assets/postgres.svg";
 import React from "../assets/react.svg";
 import Sanam from "../assets/sanam.jpg";
 import TypeScript from "../assets/typescript.svg";
 import Waving from "../assets/waving.png";
-
 export default function Home({ id }: { id: string }) {
+  const matches = useMediaQuery("(max-width:900px)");
   return (
     <Box
       id={id}
       sx={{
+        backgroundColor: "#f9f9f9",
         display: "flex",
-        marginTop: "4em",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          // maxWidth: "107rem",
-          padding: "4em",
-          gap: "4em",
-          flexWrap: "wrap-reverse",
+          flexDirection: "column",
+          maxWidth: "62em",
+          width: "100%",
+          "@media (max-width: 500px)": {
+            padding: "2em 2em",
+          },
+          "@media (max-width: 1024px)": {
+            padding: "6em 2em 2em 2em!important",
+          },
+          "@media (max-width: 1281px)": {
+            padding: "8em 2em 14em 2em!important",
+          },
+          padding: "16em 2em 14em 2em",
         }}
       >
-        <Box>
-          <Typography
-            variant="h2"
-            fontWeight="bold"
-            sx={{ position: "relative" }}
-          >
-            {" "}
-            Full Stack Software
-            <br />
-            Developer{" "}
-            <img
-              src={Waving}
-              height={"70em"}
-              style={{
-                position: "absolute",
-              }}
-            />
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "18px",
-              marginTop: "1em",
-            }}
-          >
-            Hi, I'm Sanam Limbu. A passionate Software Developer <br /> based in
-            Perth, Australia. 📍
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "18px",
-              marginTop: "1em",
-            }}
-          >
-            Aside from software engineering, I enjoy going to the gym, <br />{" "}
-            and watching Manchester United playing soccer.
-          </Typography>
-          <Typography
-            sx={{
-              marginTop: "1em",
-            }}
-          >
-            <IconButton
-              target="_new"
-              rel="noopener noreferrer"
-              href={`https://www.linkedin.com/in/sanam-limbu/`}
+        <Box
+          sx={{
+            display: "flex",
+            gap: "4em",
+            flexWrap: "wrap-reverse",
+            "@media (max-width: 978px)": {
+              textAlign: "center",
+              justifyContent: "center",
+            },
+          }}
+        >
+          <Box>
+            <Typography variant={matches ? "h3" : "h2"} fontWeight="bold">
+              {" "}
+              Full Stack Software
+              <br />
+              Developer{" "}
+              {matches ? (
+                <img
+                  src={Waving}
+                  height={"40em"}
+                  style={{
+                    position: "absolute",
+                    marginLeft: "0.2em",
+                  }}
+                />
+              ) : (
+                <img
+                  src={Waving}
+                  height={"70em"}
+                  style={{
+                    position: "absolute",
+                    marginLeft: "0.2em",
+                  }}
+                />
+              )}
+            </Typography>
+            <Typography
               sx={{
-                padding: "0",
-                "&:hover": {
-                  background: "none",
-                },
-                marginRight: "0.5em",
+                fontSize: "18px",
+                marginTop: "1em",
+                color: "rgb(85, 85, 85)",
               }}
             >
-              <LinkedIn
-                fontSize="large"
-                color="inherit"
-                sx={{
-                  color: "text.primary",
-                  " &:hover": {
-                    color: "rgb(10, 123, 245)",
-                  },
-                }}
-              />
-            </IconButton>
-            <IconButton
-              target="_new"
-              rel="noopener noreferrer"
-              href={`https://github.com/sanamlimbu`}
+              Hi, I'm Sanam Limbu. A passionate Software Developer <br /> based
+              in Perth, Australia. 📍
+            </Typography>
+            <Typography
               sx={{
-                padding: "0",
+                fontSize: "18px",
+                marginTop: "1em",
+                color: "rgb(85, 85, 85)",
               }}
             >
-              <GitHub
-                fontSize="large"
+              Aside from software engineering, I enjoy going to the gym, <br />{" "}
+              and watching Manchester United playing soccer.
+            </Typography>
+            <Typography
+              sx={{
+                marginTop: "1em",
+              }}
+            >
+              <IconButton
+                target="_new"
+                rel="noopener noreferrer"
+                href={`https://www.linkedin.com/in/sanam-limbu/`}
                 sx={{
-                  color: "text.primary",
-                  " &:hover": {
-                    color: "rgb(10, 123, 245)",
+                  padding: "0",
+                  "&:hover": {
+                    background: "none",
+                  },
+                  marginRight: "0.5em",
+                }}
+              >
+                <img src={LinkedIn} height={"42"} />
+              </IconButton>
+              <IconButton
+                target="_new"
+                rel="noopener noreferrer"
+                href={`https://github.com/sanamlimbu`}
+                sx={{
+                  padding: "0",
+                  "&:hover": {
+                    background: "none",
                   },
                 }}
-              />
-            </IconButton>
-          </Typography>
+              >
+                <img src={GitHub} height={"42"} />
+              </IconButton>
+            </Typography>
+          </Box>
+          <AmoebaBorderBox></AmoebaBorderBox>
         </Box>
-        <AmoebaBorderBox></AmoebaBorderBox>
-      </Box>
-      <Box>
-        <Typography>
-          <span>Tech Stack</span>
-          <Divider />
-        </Typography>
-        <Box sx={{ display: "flex", gap: "1em" }}>
-          <ImageContainer>
-            <StyledImg src={JavaScript} />
-          </ImageContainer>
-          <ImageContainer>
-            <StyledImg src={React} />
-          </ImageContainer>
-          <ImageContainer>
-            <StyledImg src={Go} />
-          </ImageContainer>
-          <ImageContainer>
-            <StyledImg src={TypeScript} />
-          </ImageContainer>
-          <ImageContainer>
-            <StyledImg src={Postgres} />
-          </ImageContainer>
-          <ImageContainer>
-            <StyledImg src={AWS} />
-          </ImageContainer>
+        <Box>
+          <Box
+            sx={{
+              marginBottom: "1em",
+              marginTop: "3em",
+              "@media (max-width: 900px)": {
+                textAlign: "center",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "18px",
+                fontWeight: "bold",
+              }}
+            >
+              Tech Stack
+            </Typography>
+            <Divider />
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              gap: "1em",
+              flexWrap: "wrap",
+              marginBottom: "1em",
+              "@media (max-width: 900px)": {
+                justifyContent: "center",
+              },
+            }}
+          >
+            <ImageContainer>
+              <StyledImg src={HTML} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={CSS} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={JavaScript} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={React} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={Go} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={TypeScript} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={Postgres} />
+            </ImageContainer>
+            <ImageContainer>
+              <StyledImg src={AWS} />
+            </ImageContainer>
+          </Box>
         </Box>
       </Box>
     </Box>
@@ -149,16 +206,26 @@ export default function Home({ id }: { id: string }) {
 
 const AmoebaBorderBox = styled(Box)(({ theme }) => ({
   backgroundImage: `url(${Sanam})`,
-  width: "25rem",
-  height: "25rem",
+  width: "22rem",
+  height: "22rem",
   backgroundSize: "cover",
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   border: "3px solid $black-shade",
 
   "@media (max-width: 500px)": {
-    width: "22rem",
-    height: "22rem",
+    width: "16rem!important",
+    height: "16rem!important",
+  },
+
+  "@media (max-width: 768px)": {
+    width: "18rem",
+    height: "18rem",
+  },
+
+  "@media (max-width: 1024px)": {
+    width: "20rem",
+    height: "20rem",
   },
 
   animation: "morph 8s ease-in-out infinite",
@@ -183,7 +250,7 @@ const StyledImg = styled("img")(({ theme }) => ({
   height: "2em",
 }));
 
-const ImageContainer = styled(Box)(({ theme }) => ({
+export const ImageContainer = styled(Box)(({ theme }) => ({
   width: "fit-content",
   height: "fit-content",
   backgroundColor: "white",

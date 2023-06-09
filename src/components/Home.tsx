@@ -90,20 +90,22 @@ export default function Home({ id }: { id: string }) {
                 fontSize: "18px",
                 marginTop: "1em",
                 color: "rgb(85, 85, 85)",
+                maxWidth: "22em",
               }}
             >
-              Hi, I'm Sanam Limbu. A passionate Software Developer <br /> based
-              in Perth, Australia. 📍
+              Hi, I'm Sanam Limbu. A passionate Software Developer based in
+              Perth, Australia. 📍
             </Typography>
             <Typography
               sx={{
                 fontSize: "18px",
                 marginTop: "1em",
                 color: "rgb(85, 85, 85)",
+                maxWidth: "22em",
               }}
             >
-              Aside from software engineering, I enjoy going to the gym, <br />{" "}
-              and watching Manchester United playing soccer.
+              Aside from software engineering, I enjoy going to the gym, and
+              watching Manchester United playing soccer.
             </Typography>
             <Typography
               sx={{

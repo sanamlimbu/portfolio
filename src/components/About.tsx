@@ -69,23 +69,28 @@ export default function About({ id }: { id: string }) {
             A Full Stack Software Developer
             <br /> based in Perth, Australia 📍
           </Typography>
-          <Typography sx={{ fontSize: "18px", color: "rgb(85, 85, 85)" }}>
-            I am a Software Developer with a demonstrated history
-            <br />
-            of delivering high-quality web applications. I have a solid
-            <br /> technical background and a proven ability to take on
-            <br /> complex projects.
+          <Typography
+            sx={{
+              fontSize: "18px",
+              color: "rgb(85, 85, 85)",
+              maxWidth: "22em",
+            }}
+          >
+            I am a Software Developer with a demonstrated history of delivering
+            high-quality web applications. I have a solid technical background
+            and a proven ability to take on complex projects.
           </Typography>
           <Typography
             sx={{
               fontSize: "18px",
               marginTop: "1em",
               color: "rgb(85, 85, 85)",
+              maxWidth: "22em",
             }}
           >
-            I am known for my ability to adapt to new environments,
-            <br /> learn new technologies, and work effectively with <br />
-            teams to produce scalable, maintainable software solutions.
+            I am known for my ability to adapt to new environments, learn new
+            technologies, and work effectively with teams to produce scalable,
+            maintainable software solutions.
           </Typography>
         </Box>
       </Box>

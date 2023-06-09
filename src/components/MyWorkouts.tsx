@@ -26,14 +26,12 @@ export default function MyWorkOuts() {
           fontWeight: "500",
           fontSize: "17px",
           textAlign: "center",
+          maxWidth: "22em",
         }}
       >
-        My Workouts is a web application designed
-        <br /> to help you track and manage your workout
-        <br />
-        routines. This app allows you to record and
-        <br /> monitor your workouts, providing valuable <br />
-        insights into your progress over.
+        My Workouts is a web application designed to help you track and manage
+        your workout routines. This app allows you to record and monitor your
+        workouts, providing valuable insights into your progress over.
       </Typography>
       <Box
         sx={{

@@ -19,7 +19,7 @@ export default function Contact({ id }: { id: string }) {
           display: "flex",
           justifyContent: "space-between",
           maxWidth: "62em",
-          padding: "6em 2em 6em 2em",
+          padding: "6em 2em",
           width: "100%",
           "@media (max-width: 768px)": {
             flexDirection: "column",

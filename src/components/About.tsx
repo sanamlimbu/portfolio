@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
-import Laptop from "../assets/laptop.webp";
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import Laptop from "../assets/laptop.jpeg";
 
 export default function About({ id }: { id: string }) {
+  const matches = useMediaQuery("(max-width:480px)");
   return (
     <Box
       id={id}
@@ -28,14 +29,23 @@ export default function About({ id }: { id: string }) {
         }}
       >
         <Box sx={{ position: "relative" }}>
-          <img
-            src={Laptop}
-            height={"350px"}
-            width={"410px"}
-            style={{
-              borderRadius: "16px",
-            }}
-          />
+          {matches ? (
+            <img
+              src={Laptop}
+              height={"250px"}
+              style={{
+                borderRadius: "16px",
+              }}
+            />
+          ) : (
+            <img
+              src={Laptop}
+              height={"336px"}
+              style={{
+                borderRadius: "16px",
+              }}
+            />
+          )}
         </Box>
         <Box>
           <Typography
@@ -59,16 +69,20 @@ export default function About({ id }: { id: string }) {
             A Full Stack Software Developer
             <br /> based in Perth, Australia 📍
           </Typography>
-          <Typography sx={{ fontSize: "18px" }}>
+          <Typography sx={{ fontSize: "18px", color: "rgb(85, 85, 85)" }}>
             I am a Software Developer with a demonstrated history
             <br />
             of delivering high-quality web applications. I have a solid
             <br /> technical background and a proven ability to take on
-            <br /> complex projects with skills in various technologies,
-            <br /> including ReactJS, TypeScript, Go, PostgreSQL, Docker,
-            <br /> and AWS.
+            <br /> complex projects.
           </Typography>
-          <Typography sx={{ fontSize: "18px", marginTop: "1em" }}>
+          <Typography
+            sx={{
+              fontSize: "18px",
+              marginTop: "1em",
+              color: "rgb(85, 85, 85)",
+            }}
+          >
             I am known for my ability to adapt to new environments,
             <br /> learn new technologies, and work effectively with <br />
             teams to produce scalable, maintainable software solutions.

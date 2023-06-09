@@ -48,36 +48,6 @@ export const ColorModeContextProvider = (props: {
             '"Segoe UI Emoji"',
             '"Segoe UI Symbol"',
           ].join(","),
-          // allVariants: {
-          //   fontSize: "18px",
-          //   fontWeight: "300",
-          //   lineHeight: 1.4,
-          // },
-          // h1: {
-          //   fontSize: "24px",
-          //   fontWeight: "bold",
-          //   lineHeight: 1.2,
-          // },
-          // h2: {
-          //   fontSize: "20px",
-          //   fontWeight: "bold",
-          //   lineHeight: 1.3,
-          // },
-          // h3: {
-          //   fontSize: "18px",
-          //   fontWeight: "bold",
-          //   lineHeight: 1.4,
-          // },
-          // h4: {
-          //   fontSize: "16px",
-          //   fontWeight: "bold",
-          //   lineHeight: 1.5,
-          // },
-          // h5: {
-          //   fontSize: "14px",
-          //   fontWeight: "bold",
-          //   lineHeight: 1.6,
-          // },
         },
       }),
     [mode]

@@ -26,13 +26,13 @@ export default function RentHome() {
           fontWeight: "500",
           fontSize: "17px",
           textAlign: "center",
+          maxWidth: "22em",
         }}
       >
-        RentHome is a web application designed to
-        <br /> simplify the process of renting and finding
-        <br /> homes. It provides a user-friendly platform
-        <br /> where agents can list rental properties, and <br />
-        tenants can easily search available homes.
+        Rent Home is a web application designed to simplify the process of
+        renting and finding homes. It provides a user-friendly platform where
+        agents can list rental properties, and tenants can easily search
+        available homes.
       </Typography>
       <Box
         sx={{
